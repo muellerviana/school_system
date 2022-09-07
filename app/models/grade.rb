@@ -1,4 +1,4 @@
 class Grade < ApplicationRecord
-  belongs_to :instructor
-  belongs_to :course
+  has_many :instructors, class_name: "instructor", foreign_key: "reference_id" :instructor
+  has_many :courses, class_name: "course", foreign_key: "reference_id" :course
 end
